@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 90%;
+  margin: auto;
+}
+
+.header-links {
+  display: flex;
+  padding-top: 10px;
+
+  &-link {
+    padding-right: 30px;
+
+    & a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.header-name {
+  padding-top: 10px;
+}
+
+.header-name a {
+  color: black;
+  text-decoration: none;
+}
+
+#google-sign {
+  color: black;
+  text-decoration: none;
+}

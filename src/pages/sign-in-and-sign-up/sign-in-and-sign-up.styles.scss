@@ -1,0 +1,27 @@
+.sign-in-and-sign-up {
+  display: flex;
+  justify-content: space-between;
+  max-width: 768px;
+  margin: 3rem auto 0;
+  height:80vh;
+
+
+  .custom-button {
+    margin-top: 1rem;
+    padding: 5px;
+  }
+}
+
+.google-sign-in {
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .sign-in-and-sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2rem auto 0;
+  }
+}

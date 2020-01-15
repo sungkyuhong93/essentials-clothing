@@ -1,0 +1,15 @@
+.homepage-menu {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media(max-width:750px) {
+  .homepage-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

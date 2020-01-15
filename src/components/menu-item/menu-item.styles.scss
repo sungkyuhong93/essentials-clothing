@@ -1,5 +1,26 @@
 .homepage-menu-item {
   background-size: cover;
   background-position: center;
-  height: 380px;
+  min-height: 380px;
+  width: 48%;
+  margin-top: 2rem;
+  position: relative;
+  cursor: pointer;
+
+  & h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .homepage-menu-item {
+    width: 100%;
+  }
 }

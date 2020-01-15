@@ -1,19 +1,33 @@
 .collection-page {
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: auto;
 
   .title {
     font-size: 38px;
-    margin: 0 auto 30px;
+    margin: 30px auto 30px auto;
   }
 
   .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     & .collection-item {
       margin-bottom: 30px;
+      width: 23%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-page {
+    .items {
+      & .collection-item {
+        margin-bottom: 30px;
+        width: 48%;
+      }
     }
   }
 }

@@ -1,11 +1,10 @@
-.collection-item-img {
-  height: 250px;
-  width: 250px;
-  background-size: cover;
-  background-position: center center;
+.collection-item {
+  text-align: center;
 }
 
-.collection-item-footer {
-  display: flex;
-  justify-content: space-between;
+.collection-item-img {
+  height: 250px;
+  // width: 250px;
+  background-size: cover;
+  background-position: center center;
 }

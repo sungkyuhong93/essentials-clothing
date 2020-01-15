@@ -20,20 +20,16 @@ const Header = ({ currentUser, hidden }) => (
 
     <div className="header-links">
       <div className="header-links-link">
-        <Link to="/">About</Link>
-      </div>
-      <div className="header-links-link">
         <Link to="/shop">Shop</Link>
-      </div>
-      <div className="header-links-link">
-        <Link to="/contact">Contact</Link>
       </div>
       {currentUser ? (
         <div className="header-link-links" onClick={() => auth.signOut()}>
           Sign Out
         </div>
       ) : (
-        <Link to="/signin">Sign In</Link>
+        <Link id="google-sign" to="/signin">
+          Sign In
+        </Link>
       )}
       <CartIcon />
     </div>

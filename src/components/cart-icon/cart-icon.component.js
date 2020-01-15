@@ -3,13 +3,20 @@ import { connect } from "react-redux";
 
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import { selectCartItemsCount } from "../../redux/cart/cart.selectors";
+import { Link } from "react-router-dom";
 
 import "./cart-icon.styles.scss";
 import { createStructuredSelector } from "reselect";
+import CartIconImg from "./cart-icon.png";
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => (
-  <div className="cart-icon" onClick={toggleCartHidden}>
-    <span className="item-count">{itemCount}</span>
+  <div className="cart-icon">
+    <div className="cart-icon-wrap">
+      <Link to="/checkout">
+        <img src={CartIconImg} />
+        <span className="item-count">{itemCount}</span>
+      </Link>
+    </div>
   </div>
 );
 

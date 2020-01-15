@@ -5,6 +5,22 @@
 
 .collection-preview-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.collection-preview-row .collection-item {
+  width: 23%;
+}
+
+@media (max-width: 768px) {
+  .collection-preview-row {
+    flex-wrap: wrap;
+  }
+  .collection-preview-row .collection-item {
+    width: 48%;
+  }
+
+  .collection-preview-row .collection-item .custom-button {
+    margin-bottom: 1rem;
+  }
 }

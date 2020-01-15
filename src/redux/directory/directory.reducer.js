@@ -1,4 +1,7 @@
 import { bindActionCreators } from "redux";
+import Mens from "./mens-wear.jpg"
+import Womens from "./womens.jpg"
+import Sneakers from "./off-white.png"
 
 const INITIAL_STATE = {
   sections: [
@@ -16,20 +19,20 @@ const INITIAL_STATE = {
     },
     {
       title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+      imageUrl: Sneakers,
       id: 3,
       linkUrl: "shop/sneakers"
     },
     {
       title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+      imageUrl: Womens,
       size: "large",
       id: 4,
       linkUrl: "shop/womens"
     },
     {
       title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+      imageUrl: Mens,
       size: "large",
       id: 5,
       linkUrl: "shop/mens"
