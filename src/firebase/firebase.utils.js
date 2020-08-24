@@ -3,14 +3,14 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyCuAy6fArgEg1pk1-N0sxqIgClcV70ZNyc",
-  authDomain: "sungs-essentials.firebaseapp.com",
-  databaseURL: "https://sungs-essentials.firebaseio.com",
-  projectId: "sungs-essentials",
-  storageBucket: "",
-  messagingSenderId: "798206941098",
-  appId: "1:798206941098:web:5448f49c2885b0a7217dd3",
-  measurementId: "G-SWZ7Y7GZ94"
+  apiKey: "AIzaSyAQL_TRNj0VEhVTj0TJZnG7I80EBRjsCaE",
+  authDomain: "crwn-db-d1e1c.firebaseapp.com",
+  databaseURL: "https://crwn-db-d1e1c.firebaseio.com",
+  projectId: "crwn-db-d1e1c",
+  storageBucket: "crwn-db-d1e1c.appspot.com",
+  messagingSenderId: "470506055682",
+  appId: "1:470506055682:web:45e15e03d8b1fe744e5f1b",
+  measurementId: "G-GPYBTXTJXN",
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -31,7 +31,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
       console.log("error creating user", error.message);
@@ -50,7 +50,7 @@ export const addCollectionAndDocuments = async (
 
   const batch = firestore.batch();
 
-  objectsToAdd.forEach(obj => {
+  objectsToAdd.forEach((obj) => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
@@ -58,15 +58,15 @@ export const addCollectionAndDocuments = async (
   return await batch.commit();
 };
 
-export const convertCollectionsSnapshotToMap = collections => {
-  const transformedCollection = collections.docs.map(doc => {
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformedCollection = collections.docs.map((doc) => {
     const { title, items } = doc.data();
 
     return {
       routeName: encodeURI,
       id: doc.id,
       title,
-      items
+      items,
     };
   });
 
@@ -83,7 +83,7 @@ export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({
-  prompt: "select_account"
+  prompt: "select_account",
 });
 
 export const signInWithGoogle = () => {
